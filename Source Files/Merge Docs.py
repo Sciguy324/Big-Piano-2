@@ -21,6 +21,8 @@ pages = initial_docs.outline[1]['/Page']['/Parent']['/Kids']
 new_annotations = []
 for i, annotation in enumerate(writer.pages[1].annotations):
     obj = annotation.get_object()
+    if 'github' in str(obj):
+        continue
     # Extract hitbox from annotation
     rect = obj['/Rect']
     # Extract page number
