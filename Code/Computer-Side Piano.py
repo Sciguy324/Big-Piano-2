@@ -46,6 +46,14 @@ def load_icon():
     return pygame.image.fromstring(icon_string, (64, 64), 'RGBA')
 
 
+# Print help text
+print("""Controls:
+Esc   - Toggle fullscreen
+Left  - Previous sound font
+Right - Next sound font
+Up    - Toggle sound font cycling
+""")
+
 # Ask for port
 #port = input("Enter port for Arduino (ex: COM4): ")
 
