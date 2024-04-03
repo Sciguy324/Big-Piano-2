@@ -54,9 +54,6 @@ Right - Next sound font
 Up    - Toggle sound font cycling
 """)
 
-# Ask for port
-#port = input("Enter port for Arduino (ex: COM4): ")
-
 
 # Initialize pygame
 pygame.mixer.pre_init(44100, -16, 2, 1024)
@@ -106,10 +103,7 @@ class Key:
                 note.stop()
             # Restart sound playing
             self.note_list[self.index].play()
-            # self.note.stop()
-            # self.note.play()
             self.note_list[self.index].fadeout(3000)
-            # self.note.fadeout(3000)
             self.set_state(True)
             return True
 
